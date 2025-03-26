@@ -1,40 +1,46 @@
-# 🧠 Smart To-Do + Weight Tracker with IBM watsonx.ai
+# 📝 Smart To-Do List (AI-Powered by IBM Watsonx.ai)
 
-A personal productivity and wellness app that helps you:
-- Track your daily office tasks and health goals
-- Log morning/evening weight
-- View progress trends
-- 🧠 Ask AI for personalized daily tips and motivation — powered by IBM watsonx.ai!
+An AI-powered productivity tool that generates intelligent task suggestions based on your daily input. Built with Streamlit and integrated with IBM Watsonx.ai using the Granite-13b-chat foundation model.
 
-## 🚀 Built With
-- [Streamlit](https://streamlit.io/) – for frontend UI
-- [Pandas](https://pandas.pydata.org/) – for data handling
-- [Matplotlib](https://matplotlib.org/) – for charts
-- [IBM watsonx.ai](https://www.ibm.com/products/watsonx) – for foundation model-based AI assistant
+---
 
-## 🧠 AI Features
-- Ask wellness or productivity questions to an AI assistant
-- Powered by [Granite 13B Instruct](https://dataplatform.cloud.ibm.com)
-- Uses `ibm-watson-machine-learning` SDK to call IBM Foundation Models
+## 🚀 Live App
 
-## 🧩 Features
-- ✅ Daily to-do checklist: morning & evening
-- 📊 Visual weight progress tracking
-- 🔁 Persistent CSV storage
-- 💬 AI-powered suggestion box (Ask questions like “How to stay consistent?”)
+🔗 [Click here to open the deployed app](https://your-username-your-repo-name.streamlit.app)
 
-## 🧠 Example AI Prompts
-- “What can I do to lose 2kg in a month?”
-- “Give me a productivity tip for tomorrow.”
-- “What healthy dinner can I try tonight?”
+---
 
-## 📸 Screenshots
+## 🎯 Features
 
-_Add screenshots or a video link here if available._
+- ✅ Simple and clean web UI using Streamlit
+- 🧠 AI-generated task suggestions from IBM watsonx.ai
+- 🔐 Secure API access using Streamlit Secrets
+- ⚡ Dynamic prompt generation using Foundation Models (Granite-13b-chat)
+- ☁️ Hosted on Streamlit Cloud
 
-## 🔧 Setup
+---
 
-1. Clone this repo:
-   ```bash
-   git clone https://github.com/your-username/smart-todo-tracker.git
-   cd smart-todo-tracker
+## 💡 How It Works
+
+1. User enters a description of their day (e.g., "I have a meeting and a deadline").
+2. App uses IBM watsonx.ai to generate 3 relevant to-do tasks.
+3. Suggestions are shown instantly in the UI.
+
+---
+
+## 🔧 Tech Stack
+
+- **Frontend/UI**: Streamlit (Python)
+- **AI Backend**: IBM Watsonx.ai (Granite-13b-chat model)
+- **Deployment**: Streamlit Cloud
+- **Secrets Management**: Streamlit Secrets
+
+---
+
+## 🛠️ Installation (Run Locally)
+
+### 1. Clone the repo
+
+```bash
+git clone https://github.com/your-username/smart-todo-ai.git
+cd smart-todo-ai
