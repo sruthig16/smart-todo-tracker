@@ -61,16 +61,22 @@ if st.button("💡 Suggest Tasks"):
             token = get_bearer_token(ibm_api_key)
             if token:
                 response = call_watsonx_api(token, user_input)
-                if response.status_code == 200:
-                    result = response.json()
-                    generated = result["results"][0]["generated_text"]
-                    st.success("✅ AI Suggested Tasks:")
-                    for line in generated.strip().split("\n"):
-                        if line.strip():
-                            st.write(f"✅ {line}")
-                else:
-                    st.error("❌ AI API call failed.")
-                    st.write("Status Code:", response.status_code)
-                    st.json(response.json())
-    else:
-        st.warning("Please enter something before clicking.")
+               if response.status_code == 200:
+    result = response.json()
+    output = result["results"][0]["generated_text"]
+    st.success("✅ AI Suggested Tasks:")
+    for line in output.strip().split("\n"):
+        st.write(f"✅ {line}")
+else:
+    st.error("❌ AI API call failed.")
+    
+    # 🚨 Start of detailed debug output
+    st.write("📡 Status Code:", response.status_code)
+    st.write("🧾 Raw Response:")
+    
+    try:
+        st.json(response.json())  # Show JSON error (if available)
+    except Exception as e:
+        st.write("⚠️ Could not decode JSON. Showing raw text instead:")
+        st.text(response.text)
+        st.write("⚠️ Error:", str(e))
